@@ -1,7 +1,5 @@
-
-
 $(function() {
-  var timeout = 5000;
+  var timeout = 9000;
   var elements = $('.scene');
   var waitForMe = elements.length;
   var spinnerOptions = {
@@ -39,10 +37,11 @@ $(function() {
     div.css({'background-image':'url("'+bg+'")'});
     // Load asynchronously with a loading hook
     $('<img/>').attr('src', bg).load(function() {
-      var percent = Math.round((((elements.length - waitForMe) + 1) * 100) / elements.length);
-      $('#loading-text').html('Loading... '+percent+'%');
+      --waitForMe;
+      var done = elements.length - waitForMe;
+      $('#loading-text').html('Loading images... ('+done+'/'+elements.length+')');
       // When all are loaded...
-      if ( --waitForMe==0 ) { 
+      if ( waitForMe==0 ) { 
         doneAll();
       }
     });
