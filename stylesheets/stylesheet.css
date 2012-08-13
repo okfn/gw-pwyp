@@ -15,7 +15,6 @@ body {
   letter-spacing: 1px;
 }
 #main {
-  background: rgba(255,0,255,0.2);
   display: none;
 }
 .scene {
@@ -23,17 +22,10 @@ body {
   text-align: center;
   background-position: top center;
   background-repeat: no-repeat;
-  width: 960px;
+  width: 100%;
 }
-.scene1 {
-  height: 100px;
-}
+.scene1, 
 .scene2 {
-  height: 100px;
+  height: 900px;
 }
-.scene3 {
-  height: 100px;
-}
-.scene4 {
-  height: 3264px;
-}
+

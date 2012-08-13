@@ -27,16 +27,18 @@ $(function() {
   function doneAll() {
     spinner.stop();
     $('#loading').remove();
-    $('#main').show();
+    $('#main').fadeIn('slow');
+    doneAll = function() {}
   }
 
   $.each(elements, function(i, div) {
     div = $(div);
     // Extract URL
     var bg = div.attr('data-background');
-    // Load it asynchronously
+    // Apply directly
+    div.css({'background-image':'url("'+bg+'")'});
+    // Load asynchronously with a loading hook
     $('<img/>').attr('src', bg).load(function() {
-      div.css({'background-image':'url("'+bg+'")'});
       var percent = Math.round((((elements.length - waitForMe) + 1) * 100) / elements.length);
       $('#loading-text').html('Loading... '+percent+'%');
       // When all are loaded...
@@ -45,5 +47,5 @@ $(function() {
       }
     });
   });
-  //window.setTimeout( doneAll, timeout );
+  window.setTimeout( doneAll, timeout );
 });
