@@ -58,6 +58,25 @@ a:hover {
   color: #fff;
 }
 
+#okfn-link {
+  position: absolute;
+  top: 96px;
+  left: 50%;
+  margin-left: -450px;
+  width: 139px;
+  height: 40px;
+  text-decoration: none;
+}
+#gw-link {
+  position: absolute;
+  top: 77px;
+  left: 50%;
+  margin-left: 340px;
+  width: 110px;
+  height: 66px;
+  text-decoration: none;
+}
+
 .next {
   position: absolute;
   top: 745px;
