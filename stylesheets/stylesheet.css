@@ -58,6 +58,16 @@ a:hover {
   color: #fff;
 }
 
+.next {
+  position: absolute;
+  top: 745px;
+  left: 50%;
+  background: url('../images/next2.png') top center;
+  height: 110px;
+  width: 80px;
+  margin-left: -32px;
+}
+
 /* Scene 1 */
 /* ======= */
 .scene1 .title {
